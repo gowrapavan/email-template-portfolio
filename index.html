@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Template Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Email Portfolio</h1>
+        <p>Professional HTML email templates designed for reliability across Outlook, Gmail, and Apple Mail.</p>
+    </header>
+
+    <div class="container">
+        <div class="grid" id="templateGrid">
+            
+            <!-- 1. Welcome -->
+            <div class="card">
+                <div class="card-icon">👋</div>
+                <h2>Welcome Email</h2>
+                <p>Onboarding sequence with strong CTA.</p>
+                <div class="card-actions">
+                    <button class="btn btn-secondary" onclick="openPreview('welcome')">
+                        Preview ↗
+                    </button>
+                    <button class="btn btn-primary" onclick="openCodeModal('welcome')">
+                        View Code
+                    </button>
+                </div>
+            </div>
+
+            <!-- 2. Password Reset -->
+            <div class="card">
+                <div class="card-icon">🔒</div>
+                <h2>Password Reset</h2>
+                <p>Secure transactional notification.</p>
+                <div class="card-actions">
+                    <button class="btn btn-secondary" onclick="openPreview('password_reset')">
+                        Preview ↗
+                    </button>
+                    <button class="btn btn-primary" onclick="openCodeModal('password_reset')">
+                        View Code
+                    </button>
+                </div>
+            </div>
+
+            <!-- 3. Newsletter -->
+            <div class="card">
+                <div class="card-icon">📰</div>
+                <h2>Monthly Newsletter</h2>
+                <p>Content-rich digest layout.</p>
+                <div class="card-actions">
+                    <button class="btn btn-secondary" onclick="openPreview('newsletter')">
+                        Preview ↗
+                    </button>
+                    <button class="btn btn-primary" onclick="openCodeModal('newsletter')">
+                        View Code
+                    </button>
+                </div>
+            </div>
+
+            <!-- 4. Promo -->
+            <div class="card">
+                <div class="card-icon">🏷️</div>
+                <h2>Promotional Offer</h2>
+                <p>Sales-focused urgency driver.</p>
+                <div class="card-actions">
+                    <button class="btn btn-secondary" onclick="openPreview('promo')">
+                        Preview ↗
+                    </button>
+                    <button class="btn btn-primary" onclick="openCodeModal('promo')">
+                        View Code
+                    </button>
+                </div>
+            </div>
+
+            <!-- 5. Verify -->
+            <div class="card">
+                <div class="card-icon">✅</div>
+                <h2>Email Verification</h2>
+                <p>Double opt-in confirmation.</p>
+                <div class="card-actions">
+                    <button class="btn btn-secondary" onclick="openPreview('verify')">
+                        Preview ↗
+                    </button>
+                    <button class="btn btn-primary" onclick="openCodeModal('verify')">
+                        View Code
+                    </button>
+                </div>
+            </div>
+
+            <!-- 6. Product Launch -->
+            <div class="card">
+                <div class="card-icon">🚀</div>
+                <h2>Product Launch</h2>
+                <p>Showcase for new features.</p>
+                <div class="card-actions">
+                    <button class="btn btn-secondary" onclick="openPreview('product_launch')">
+                        Preview ↗
+                    </button>
+                    <button class="btn btn-primary" onclick="openCodeModal('product_launch')">
+                        View Code
+                    </button>
+                </div>
+            </div>
+
+             <!-- 7. Breaking News -->
+             <div class="card">
+                <div class="card-icon">🚨</div>
+                <h2>Breaking News</h2>
+                <p>High-impact sports alert.</p>
+                <div class="card-actions">
+                    <button class="btn btn-secondary" onclick="openPreview('breaking_news')">
+                        Preview ↗
+                    </button>
+                    <button class="btn btn-primary" onclick="openCodeModal('breaking_news')">
+                        View Code
+                    </button>
+                </div>
+            </div>
+
+             <!-- 8. Match Summary -->
+             <div class="card">
+                <div class="card-icon">⚽</div>
+                <h2>Match Summary</h2>
+                <p>Post-game stats and highlights.</p>
+                <div class="card-actions">
+                    <button class="btn btn-secondary" onclick="openPreview('match_summary')">
+                        Preview ↗
+                    </button>
+                    <button class="btn btn-primary" onclick="openCodeModal('match_summary')">
+                        View Code
+                    </button>
+                </div>
+            </div>
+
+             <!-- 9. Subscription -->
+             <div class="card">
+                <div class="card-icon">💳</div>
+                <h2>Subscription Renewal</h2>
+                <p>Retention and billing update.</p>
+                <div class="card-actions">
+                    <button class="btn btn-secondary" onclick="openPreview('subscription_renewal')">
+                        Preview ↗
+                    </button>
+                    <button class="btn btn-primary" onclick="openCodeModal('subscription_renewal')">
+                        View Code
+                    </button>
+                </div>
+            </div>
+
+             <!-- 10. Weekly Sports -->
+             <div class="card">
+                <div class="card-icon">🏆</div>
+                <h2>Weekly Sports</h2>
+                <p>Curated weekly sports roundup.</p>
+                <div class="card-actions">
+                    <button class="btn btn-secondary" onclick="openPreview('weekly_sports_newsletter')">
+                        Preview ↗
+                    </button>
+                    <button class="btn btn-primary" onclick="openCodeModal('weekly_sports_newsletter')">
+                        View Code
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div id="modal" class="modal-overlay" onclick="handleModalClick(event)">
+        <div class="modal-content">
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <div class="modal-title-group">
+                    <h3 id="modalTitle">Template Name</h3>
+                    <span class="badge">Production</span>
+                </div>
+                <div class="modal-actions">
+                    <button class="btn btn-secondary" style="padding: 0.4rem 0.8rem; font-size: 0.8rem;" onclick="openCurrentPreviewInNewTab()">
+                        Open Fullscreen ↗
+                    </button>
+                    <button class="icon-btn" onclick="closeModal()" aria-label="Close">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Modal Body -->
+            <div class="modal-body">
+                <!-- Left: Preview -->
+                <div class="pane pane-preview">
+                    <div class="preview-toolbar">
+                        Interactive Preview
+                    </div>
+                    <iframe id="previewFrame" src=""></iframe>
+                </div>
+                
+                <!-- Right: Code -->
+                <div class="pane pane-code">
+                    <div class="code-toolbar">
+                        <span>Source Code (HTML)</span>
+                    </div>
+                    <div id="codeContainer"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const modal = document.getElementById('modal');
+        const previewFrame = document.getElementById('previewFrame');
+        const codeContainer = document.getElementById('codeContainer');
+        const modalTitle = document.getElementById('modalTitle');
+        let currentTemplate = '';
+
+        // 1. Open Preview in New Tab (Direct Action)
+        function openPreview(templateName) {
+            window.open(`templates/preview/${templateName}_preview.html`, '_blank');
+        }
+
+        // 2. Open Preview inside Modal from Modal Button
+        function openCurrentPreviewInNewTab() {
+            if(currentTemplate) {
+                openPreview(currentTemplate);
+            }
+        }
+
+        // 3. Open "View Code" Modal (Includes Preview + Code)
+        function openCodeModal(templateName) {
+            currentTemplate = templateName;
+            
+            // Set Title
+            const readableName = templateName.replace(/_/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
+            modalTitle.textContent = readableName;
+            
+            // Load Preview Iframe
+            previewFrame.src = `templates/preview/${templateName}_preview.html`;
+            
+            // Load Code
+            codeContainer.textContent = 'Loading source code...';
+            codeContainer.style.color = '#6b7280';
+
+            fetch(`templates/${templateName}.html`)
+                .then(response => {
+                    if (!response.ok) throw new Error("Status " + response.status);
+                    return response.text();
+                })
+                .then(text => {
+                    codeContainer.style.color = '#e2e8f0';
+                    codeContainer.textContent = text;
+                })
+                .catch(err => {
+                    console.error(err);
+                    codeContainer.style.color = '#ff7b72';
+                    codeContainer.innerHTML = `Unable to fetch source code.\n\nPossible reasons:\n1. You are opening index.html directly (file://). Browsers block local file fetching.\n2. The file path is incorrect.\n\nSolution: Use a local server (e.g., VS Code Live Server).`;
+                });
+
+            // Show Modal
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            modal.classList.remove('active');
+            setTimeout(() => {
+                previewFrame.src = '';
+                codeContainer.textContent = '';
+                currentTemplate = '';
+            }, 200);
+            document.body.style.overflow = '';
+        }
+
+        function handleModalClick(e) {
+            if (e.target === modal) {
+                closeModal();
+            }
+        }
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && modal.classList.contains('active')) {
+                closeModal();
+            }
+        });
+    </script>
+</body>
+</html>

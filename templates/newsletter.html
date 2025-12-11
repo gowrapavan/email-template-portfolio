@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Monthly Digest</title>
+<style>
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
+    .container { width: 600px; margin: 0 auto; }
+    @media (max-width: 600px) { .container { width: 100% !important; } }
+</style>
+</head>
+<body style="margin: 0; padding: 0; background-color: #f3f3f3;">
+    <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" style="background-color: #f3f3f3;">
+        <tr>
+            <td align="center" style="padding: 20px 0;">
+                <table role="presentation" class="container" width="600" border="0" cellspacing="0" cellpadding="0" style="background-color: #ffffff;">
+                    <tr>
+                        <td style="padding: 30px; text-align: center; background-color: #333333; color: #ffffff;">
+                            <h1 style="margin: 0;">%%MONTH%% Newsletter</h1>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 20px;">
+                            <h2 style="color: #333333;">Top Stories</h2>
+                            <p style="color: #666666; line-height: 1.6;">
+                                %%INTRO_TEXT%%
+                            </p>
+                            <hr style="border: 0; border-top: 1px solid #eeeeee; margin: 20px 0;">
+                            <!-- Article 1 -->
+                            <h3 style="margin-bottom: 5px; color: #5e81ac;">%%ARTICLE_1_TITLE%%</h3>
+                            <p style="margin-top: 0; color: #555;">%%ARTICLE_1_SNIPPET%%</p>
+                            <a href="%%ARTICLE_1_URL%%" style="color: #5e81ac; text-decoration: none; font-weight: bold;">Read More &rarr;</a>
+                            
+                            <hr style="border: 0; border-top: 1px solid #eeeeee; margin: 20px 0;">
+                            
+                             <!-- Article 2 -->
+                            <h3 style="margin-bottom: 5px; color: #5e81ac;">%%ARTICLE_2_TITLE%%</h3>
+                            <p style="margin-top: 0; color: #555;">%%ARTICLE_2_SNIPPET%%</p>
+                            <a href="%%ARTICLE_2_URL%%" style="color: #5e81ac; text-decoration: none; font-weight: bold;">Read More &rarr;</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="background-color: #eeeeee; padding: 20px; text-align: center; font-size: 12px; color: #777;">
+                            <p>Sent to %%USER_EMAIL%%</p>
+                            <p>Street Address, City, State, Zip</p>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
